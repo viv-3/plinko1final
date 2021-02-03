@@ -9,6 +9,10 @@ var particles = []
 var plinkos = []
 var divisions = []
 
+var particle
+var score = 0
+var turn = 0
+
 
 
 var divisonHeight = 300
@@ -45,7 +49,7 @@ function setup() {
 
 function draw() {
   background(0,0,0); 
- 
+  Engine.update(engine)
   for(var i = 0; i<plinkos.length;i++){plinkos[i].display()}
 
   for(var b = 0; b<particles.length;b++){particles[b].display()}
@@ -57,3 +61,4 @@ function draw() {
   
   drawSprites();
 }
+
